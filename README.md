@@ -10,9 +10,9 @@ data from three cities in the United States (Chicago, New York City, and
 Washington, D.C.).
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washingon.csv
+1. chicago.csv
+2. new_york_city.csv
+3. washingon.csv
 
 ### Credits
 Udacity
