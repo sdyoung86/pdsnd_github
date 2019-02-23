@@ -27,7 +27,7 @@ def get_filters():
     month = "all"
     day = "all"
 
-    city = input("Select a city: Chicago, New York City, or Washington:\n").lower()
+    city = input("Enter a city: Chicago, New York City, or Washington:\n").lower()
     while city not in cities:
         city = input("Please enter a valid city: Chicago, New York, or Washington.\n").lower()
 
@@ -36,14 +36,14 @@ def get_filters():
     user_input = input("You can filter the data by month, day, both, or not at all (type 'all' for this option).\n").lower()
 
     if user_input == "month" or user_input == "both":
-        month = input("Select a month: January, February, March, April, May, or June:\n").title()
+        month = input("Enter a month: January, February, March, April, May, or June:\n").title()
         while month not in months:
-            month = input("Please select one of the months that data is currently available for.\n").title()
+            month = input("Please enter one of the months that data is currently available for.\n").title()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
 
     if user_input == "day" or user_input == "both":
-        day = input("Select a day: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, or Saturday:\n").title()
+        day = input("Enter a day: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, or Saturday:\n").title()
         while day not in days:
             day = input("Please enter a valid day.\n").title()
 
