@@ -2,10 +2,10 @@
 2/23/2019
 
 ### Project Title
-Replace the Project Title
+US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+Interactive tool to explore bikeshare data
 
 ### Files used
 Include the files used
