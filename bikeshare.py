@@ -1,4 +1,4 @@
-mport time
+import time
 import pandas as pd
 import numpy as np
 
@@ -27,7 +27,7 @@ def get_filters():
     month = "all"
     day = "all"
 
-    city = input("Select a city: Chicago, New York City, or Washington:\n").lower()
+    city = input("Enter a city: Chicago, New York City, or Washington:\n").lower()
     while city not in cities:
         city = input("Please enter a valid city: Chicago, New York, or Washington.\n").lower()
 
@@ -36,20 +36,19 @@ def get_filters():
     user_input = input("You can filter the data by month, day, both, or not at all (type 'all' for this option).\n").lower()
 
     if user_input == "month" or user_input == "both":
-        month = input("Select a month: January, February, March, April, May, or June:\n").title()
+        month = input("Enter a month: January, February, March, April, May, or June:\n").title()
         while month not in months:
-            month = input("Please select one of the months that data is currently available for.\n").title()
+            month = input("Please enter one of the months that data is currently available for.\n").title()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
 
     if user_input == "day" or user_input == "both":
-        day = input("Select a day: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, or Saturday:\n").title()
+        day = input("Enter a day: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, or Saturday:\n").title()
         while day not in days:
             day = input("Please enter a valid day.\n").title()
 
-    print('-'*40)
+    print('-'*50)
     return city, month, day
-
 
 def load_data(city, month, day):
     """
@@ -71,7 +70,6 @@ def load_data(city, month, day):
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
-
 
     # filter by month if applicable
     if month != 'all':
@@ -114,7 +112,7 @@ def time_stats(df):
     print('Most Frequent Start Hour:', popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 def station_stats(df):
@@ -139,8 +137,7 @@ def station_stats(df):
     print('Most frequent combination of start station and end station trip: ', frequent_station_combination)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    print('-'*50)
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -159,8 +156,7 @@ def trip_duration_stats(df):
     print("\nThe mean travel time is: ", mean_travel_time)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    print('-'*50)
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -181,7 +177,6 @@ def user_stats(df):
     except KeyError:
         print('Washington does not have gender information')
 
-
     # Display earliest, most recent, and most common year of birth
     try:
         earliest_birth_yr = df['Birth Year'].min()
@@ -194,9 +189,8 @@ def user_stats(df):
     except KeyError:
         print('Washington does not have birth year information')
 
-
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 def raw_data(df):
     x = 0
@@ -225,7 +219,6 @@ def main():
         restart = input('\nWould you like to restart BDESS? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
