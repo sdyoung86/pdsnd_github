@@ -15,4 +15,4 @@ Washington, D.C.).
 3. washingon.csv
 
 ### Credits
-Udacity
+[Udacity](http://www.udacity.com)
