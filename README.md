@@ -8,7 +8,9 @@ US Bikeshare Data
 Interactive tool to explore bikeshare data
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washingon.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity
