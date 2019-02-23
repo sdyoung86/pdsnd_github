@@ -5,7 +5,9 @@
 US Bikeshare Data
 
 ### Description
-Interactive tool to explore bikeshare data
+Interactive tool using Python to explore and generate statistics of Bikeshare
+data from three cities in the United States (Chicago, New York City, and
+Washington, D.C.).
 
 ### Files used
 chicago.csv
