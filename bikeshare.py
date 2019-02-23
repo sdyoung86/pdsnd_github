@@ -1,4 +1,4 @@
-mport time
+import time
 import pandas as pd
 import numpy as np
 
@@ -50,7 +50,6 @@ def get_filters():
     print('-'*50)
     return city, month, day
 
-
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -71,7 +70,6 @@ def load_data(city, month, day):
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
-
 
     # filter by month if applicable
     if month != 'all':
@@ -141,7 +139,6 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*50)
 
-
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -160,7 +157,6 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*50)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -181,7 +177,6 @@ def user_stats(df):
     except KeyError:
         print('Washington does not have gender information')
 
-
     # Display earliest, most recent, and most common year of birth
     try:
         earliest_birth_yr = df['Birth Year'].min()
@@ -193,7 +188,6 @@ def user_stats(df):
 
     except KeyError:
         print('Washington does not have birth year information')
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*50)
@@ -225,7 +219,6 @@ def main():
         restart = input('\nWould you like to restart BDESS? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
